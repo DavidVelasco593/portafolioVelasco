@@ -3,74 +3,61 @@ import BaseLayout from "../layouts/Layout.astro";
 ---
 
 <BaseLayout>
-  <main
-    class="mx-auto max-w-4xl p-6 flex flex-col items-center justify-center min-h-screen"
-  >
-    <img
-      src="/perfil.jpg"
-      alt="David Velasco"
-      class="w-32 h-32 rounded-full mb-6 shadow-lg object-cover"
-    />
-    <h1 class="text-5xl font-extrabold tracking-tight text-center mb-4">
-      Hola, soy David Velasco
-    </h1>
-    <p class="text-xl text-gray-600 text-center mb-8">
-      Desarrollador web apasionado por la tecnología y el diseño.
-    </p>
-    <div class="flex gap-4">
+  <main class="flex min-h-screen bg-gradient-to-tr from-indigo-100 via-white to-blue-100">
+    <!-- Sidebar vertical -->
+    <aside class="w-full md:w-80 bg-gradient-to-b from-indigo-600 to-blue-500 text-white flex flex-col items-center py-12 px-6 shadow-2xl">
+      <img
+        src="/perfil.jpg"
+        alt="David Velasco"
+        class="w-28 h-28 rounded-full mb-6 border-4 border-white shadow-lg object-cover"
+      />
+      <h1 class="text-2xl font-extrabold mb-1 text-center">David Velasco</h1>
+      <p class="text-indigo-100 text-center mb-6">Desarrollador web fullstack</p>
+      <div class="flex gap-3 mb-6">
+        <a href="https://github.com/DavidVelasco593" target="_blank" class="bg-white/20 px-4 py-2 rounded-lg hover:bg-white/40 transition font-semibold">GitHub</a>
+        <a href="https://linkedin.com/in/tuusuario" target="_blank" class="bg-white/20 px-4 py-2 rounded-lg hover:bg-white/40 transition font-semibold">LinkedIn</a>
+      </div>
       <a
-        href="https://github.com/DavidVelasco593"
-        target="_blank"
-        class="bg-gray-900 text-white px-4 py-2 rounded hover:bg-gray-700 transition"
+        href="/cv-david-velasco.pdf"
+        download
+        class="inline-block bg-white text-indigo-700 px-6 py-2 rounded-lg font-bold shadow hover:bg-indigo-100 transition"
       >
-        GitHub
+        Descargar CV
       </a>
-      <a
-        href="https://www.linkedin.com/in/david-velasco-ecu/"
-        target="_blank"
-        class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
-      >
-        LinkedIn
-      </a>
-    </div>
-    <section class="w-full mt-16">
-      <h2 class="text-3xl font-bold text-center mb-8">Proyectos Destacados</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- Proyecto 1 -->
-        <div
-          class="bg-white rounded-lg shadow p-6 border border-gray-100 hover:shadow-lg transition"
-        >
-          <h3 class="text-xl font-semibold mb-2">Formulario de inscripción a una marathon en Santo Domingo</h3>
-          <p class="text-gray-600 mb-4">
-            Sistema web para gestionar y visualizar información de la
-            inscripciones a la marathon. Hecho con React, Node.js y MongoDB.
-          </p>
-          <a
-            href="https://github.com/DavidVelasco593/marathon-santo-main"
-            target="_blank"
-            class="text-blue-600 hover:underline">Ver en GitHub</a
-          >
+      <div class="flex-1"></div>
+      <footer class="mt-12 text-xs text-indigo-200 text-center">
+        © 2025 David Velasco
+      </footer>
+    </aside>
+
+    <!-- Contenido principal -->
+    <section class="flex-1 flex flex-col gap-12 px-6 py-16 md:py-24">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold mb-4 text-indigo-700">Acerca de mí</h2>
+        <p class="text-gray-700 text-lg">
+          Soy un desarrollador web apasionado por crear soluciones tecnológicas eficientes y seguras. Me especializo en el desarrollo fullstack y tengo experiencia en proyectos de ciberseguridad, aplicaciones web y gestión de datos. Siempre busco aprender nuevas tecnologías y mejorar mis habilidades.
+        </p>
+      </div>
+      <div class="max-w-5xl mx-auto w-full">
+        <h2 class="text-3xl font-bold mb-8 text-indigo-700">Proyectos Destacados</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Proyecto 1 -->
+          <div class="bg-white rounded-2xl shadow-xl p-8 border border-indigo-100 hover:shadow-2xl hover:-translate-y-2 transition">
+            <h3 class="text-xl font-semibold mb-2 text-indigo-700">Formulario de inscripción a una marathon en Santo Domingo</h3>
+            <p class="text-gray-600 mb-4">
+              Plataforma donde los usuarios se registran para la maratón mediante un formulario. El equipo organizador revisa y aprueba las inscripciones desde el sistema, notificando por correo a los seleccionados junto con instrucciones para el pago. Además, permite la administración completa de los participantes y el proceso de inscripción.
+            </p>
+            <a href="https://github.com/DavidVelasco593/marathon-santo-main" target="_blank" class="text-indigo-600 hover:underline font-semibold">Ver en GitHub</a>
+          </div>
+          <!-- Proyecto 2 -->
+          <div class="bg-white rounded-2xl shadow-xl p-8 border border-indigo-100 hover:shadow-2xl hover:-translate-y-2 transition">
+            <h3 class="text-xl font-semibold mb-2 text-indigo-700">Sistema de Ciberseguridad - Proyecto de Tesis</h3>
+            <p class="text-gray-600 mb-4">
+              Desarrollo de un sistema enfocado en la ciberseguridad para proteger la información y los activos digitales de una organización. Incluye análisis de vulnerabilidades, monitoreo y recomendaciones de buenas prácticas.
+            </p>
+            <a href="https://repositorio.espe.edu.ec/items/576a052c-94d7-4bce-bfa9-d9b9c3a3a2a6" target="_blank" class="text-indigo-600 hover:underline font-semibold">Ver Proyecto</a>
+          </div>
         </div>
-        <!-- Proyecto 2 -->
-        <div
-          class="bg-white rounded-lg shadow p-6 border border-gray-100 hover:shadow-lg transition"
-        >
-          <h3 class="text-xl font-semibold mb-2">
-            Sistema de Ciberseguridad - Proyecto de Tesis
-          </h3>
-          <p class="text-gray-600 mb-4">
-            Desarrollo de un sistema enfocado en la ciberseguridad para proteger
-            la información y los activos digitales de una organización. Incluye
-            análisis de vulnerabilidades, monitoreo y recomendaciones de buenas
-            prácticas.
-          </p>
-          <a
-            href="https://repositorio.espe.edu.ec/items/576a052c-94d7-4bce-bfa9-d9b9c3a3a2a6"
-            target="_blank"
-            class="text-blue-600 hover:underline">Ver Proyecto</a
-          >
-        </div>
-        <!-- Puedes agregar más proyectos aquí -->
       </div>
     </section>
   </main>
