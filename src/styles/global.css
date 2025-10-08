@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(30px);}
+    to { opacity: 1; transform: translateY(0);}
+  }
+  .animate-fade-in {
+    animation: fade-in 1s ease-out forwards;
+  }
+}
+.bg-diagonal-gradient {
+  background: linear-gradient(120deg, #f8fafc 0%, #e0e7ef 60%, #a5b4fc 100%);
+}
+.bg-dots {
+  background-color: #f8fafc;
+  background-image: radial-gradient(#a5b4fc 1px, transparent 1px);
+  background-size: 32px 32px;
+}
