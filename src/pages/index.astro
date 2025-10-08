@@ -1,14 +1,77 @@
 ---
 import BaseLayout from "../layouts/Layout.astro";
 ---
+
 <BaseLayout>
-  <main class="mx-auto max-w-4xl p-6 flex flex-col items-center justify-center min-h-screen">
+  <main
+    class="mx-auto max-w-4xl p-6 flex flex-col items-center justify-center min-h-screen"
+  >
+    <img
+      src="/perfil.jpg"
+      alt="David Velasco"
+      class="w-32 h-32 rounded-full mb-6 shadow-lg object-cover"
+    />
     <h1 class="text-5xl font-extrabold tracking-tight text-center mb-4">
       Hola, soy David Velasco
     </h1>
     <p class="text-xl text-gray-600 text-center mb-8">
       Desarrollador web apasionado por la tecnología y el diseño.
     </p>
-    <!-- Aquí irán tus botones/redes/foto más adelante -->
+    <div class="flex gap-4">
+      <a
+        href="https://github.com/DavidVelasco593"
+        target="_blank"
+        class="bg-gray-900 text-white px-4 py-2 rounded hover:bg-gray-700 transition"
+      >
+        GitHub
+      </a>
+      <a
+        href="https://www.linkedin.com/in/david-velasco-ecu/"
+        target="_blank"
+        class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+      >
+        LinkedIn
+      </a>
+    </div>
+    <section class="w-full mt-16">
+      <h2 class="text-3xl font-bold text-center mb-8">Proyectos Destacados</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Proyecto 1 -->
+        <div
+          class="bg-white rounded-lg shadow p-6 border border-gray-100 hover:shadow-lg transition"
+        >
+          <h3 class="text-xl font-semibold mb-2">Formulario de inscripción a una marathon en Santo Domingo</h3>
+          <p class="text-gray-600 mb-4">
+            Sistema web para gestionar y visualizar información de la
+            inscripciones a la marathon. Hecho con React, Node.js y MongoDB.
+          </p>
+          <a
+            href="https://github.com/DavidVelasco593/marathon-santo-main"
+            target="_blank"
+            class="text-blue-600 hover:underline">Ver en GitHub</a
+          >
+        </div>
+        <!-- Proyecto 2 -->
+        <div
+          class="bg-white rounded-lg shadow p-6 border border-gray-100 hover:shadow-lg transition"
+        >
+          <h3 class="text-xl font-semibold mb-2">
+            Sistema de Ciberseguridad - Proyecto de Tesis
+          </h3>
+          <p class="text-gray-600 mb-4">
+            Desarrollo de un sistema enfocado en la ciberseguridad para proteger
+            la información y los activos digitales de una organización. Incluye
+            análisis de vulnerabilidades, monitoreo y recomendaciones de buenas
+            prácticas.
+          </p>
+          <a
+            href="https://repositorio.espe.edu.ec/items/576a052c-94d7-4bce-bfa9-d9b9c3a3a2a6"
+            target="_blank"
+            class="text-blue-600 hover:underline">Ver Proyecto</a
+          >
+        </div>
+        <!-- Puedes agregar más proyectos aquí -->
+      </div>
+    </section>
   </main>
 </BaseLayout>
