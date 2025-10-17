@@ -3,15 +3,15 @@ import BaseLayout from "../layouts/Layout.astro";
 ---
 
 <BaseLayout>
-  <!-- Header fijo -->
   <header class="fixed top-0 left-0 w-full bg-white/80 backdrop-blur z-50 border-b border-gray-100">
-    <nav class="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+    <nav class="w-full flex items-center justify-between px-6 md:px-10 lg:px-16 py-4">
       <div class="flex items-center gap-4">
         <img src="/perfil.jpg" alt="David Velasco" class="w-12 h-12 rounded-full border-2 border-indigo-200 shadow" />
         <span class="font-bold text-2xl tracking-wide text-gray-700 uppercase transition-colors duration-200 hover:text-indigo-600 cursor-pointer">
           DAVID VELASCO
         </span>
       </div>
+
       <ul class="flex gap-8 text-gray-700 font-medium uppercase">
         <li><a href="#about" class="hover:text-indigo-600 transition">Sobre mí</a></li>
         <li><a href="#projects" class="hover:text-indigo-600 transition">Proyectos</a></li>
@@ -21,7 +21,6 @@ import BaseLayout from "../layouts/Layout.astro";
   </header>
 
   <main class="pt-24 bg-gradient-to-br from-indigo-50 via-white to-blue-50 min-h-screen pl-0 md:pl-24">
-    <!-- Barra lateral de redes sociales mejorada -->
     <div class="fixed left-6 top-1/2 -translate-y-1/2 z-40 flex flex-col gap-6 items-center
                 bg-white rounded-2xl shadow-lg py-4 px-2 border border-gray-200
                 transition-all duration-300
@@ -43,7 +42,6 @@ import BaseLayout from "../layouts/Layout.astro";
       </a>
     </div>
 
-    <!-- Sobre mí -->
     <section id="about" class="max-w-3xl mx-auto py-24 px-4">
       <h2 class="text-3xl font-bold mb-6 text-indigo-700">Sobre mí</h2>
       <p class="text-lg text-gray-700 leading-relaxed">
@@ -51,11 +49,10 @@ import BaseLayout from "../layouts/Layout.astro";
       </p>
     </section>
 
-    <!-- Proyectos -->
     <section id="projects" class="max-w-5xl mx-auto py-24 px-4">
       <h2 class="text-3xl font-bold mb-10 text-indigo-700 text-center">Proyectos Destacados</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- Proyecto 1 -->
+
         <div class="bg-white rounded-2xl shadow-xl p-8 border border-indigo-100 hover:shadow-2xl hover:-translate-y-2 transition">
           <h3 class="text-xl font-semibold mb-2 text-indigo-700">Formulario de inscripción a una marathon en Santo Domingo</h3>
           <p class="text-gray-600 mb-4">
@@ -63,7 +60,7 @@ import BaseLayout from "../layouts/Layout.astro";
           </p>
           <a href="https://github.com/DavidVelasco593/marathon-santo-main" target="_blank" class="text-indigo-600 hover:underline font-semibold">Ver en GitHub</a>
         </div>
-        <!-- Proyecto 2 -->
+
         <div class="bg-white rounded-2xl shadow-xl p-8 border border-indigo-100 hover:shadow-2xl hover:-translate-y-2 transition">
           <h3 class="text-xl font-semibold mb-2 text-indigo-700">Sistema de Ciberseguridad - Proyecto de Tesis</h3>
           <p class="text-gray-600 mb-4">
@@ -74,7 +71,6 @@ import BaseLayout from "../layouts/Layout.astro";
       </div>
     </section>
 
-    <!-- Contacto -->
     <section id="contact" class="max-w-3xl mx-auto py-24 px-4">
       <h2 class="text-3xl font-bold mb-6 text-indigo-700 text-center">Contáctame</h2>
       <form class="flex flex-col gap-6 bg-white/80 rounded-2xl shadow-xl p-8 border border-indigo-100" name="contacto" autocomplete="off" onsubmit="return validateContactForm(event)">
